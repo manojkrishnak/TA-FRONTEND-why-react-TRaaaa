@@ -1,0 +1,33 @@
+.container{
+    max-width: 500px;
+    /* border: 1px solid red; */
+}
+
+.img{
+    width: 80%;
+    height: 200px;
+    font-size: 0;
+}
+
+.info{
+    width: 72%;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.card-info span{
+    margin-right: 20px;
+}
+
+.flex{
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.col{
+    flex-direction: column;
+}
