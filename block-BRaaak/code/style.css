@@ -1,0 +1,26 @@
+.container{
+    max-width: 1200px;
+    width: 100%;   
+    border: 1px solid yellow;
+}
+
+.card{
+    width: 33%;
+    margin-right: 50px;
+    border: 1px solid green;
+}
+
+.img{
+    width: 100%;
+    height: 180px;
+    border: 1px solid blue;
+}
+
+.article{
+    /* width: 45%; */
+    border: 1px solid red;
+}
+
+.card-end span{
+    margin-right: 50px;
+}
