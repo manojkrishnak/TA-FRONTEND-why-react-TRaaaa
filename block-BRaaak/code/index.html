@@ -59,14 +59,14 @@
                 <>
                     <div className="container">
                         <div className="card">
-                            <img className="img" src={articles[0].imageURL} alt={articles[0].title} />
+                            <img className="img" src={props.articleInfo.imageURL} alt={props.articleInfo.title} />
                             <div className="article">
-                                <h2>{articles[0].title}</h2>
-                                <h3>{articles[0].subTitle}</h3>
-                                <p>{articles[0].description}</p>
+                                <h2>{props.articleInfo.title}</h2>
+                                <h3>{props.articleInfo.subTitle}</h3>
+                                <p>{props.articleInfo.description}</p>
                                 <div className="card-end">
-                                    <span>on {articles[0].date.getDay()}th </span>
-                                    <span>{articles[0].comments} comments</span>
+                                    <span>on {props.articleInfo.date.getDay()}th </span>
+                                    <span>{props.articleInfo.comments} comments</span>
                                 </div>
                             </div>
                         </div>
@@ -75,8 +75,12 @@
             )
         };
 
+        const Cards = () => {
+            return articles.map(article => <Card articleInfo = {article}/>)
+        }
+
         // ReactDOM
-        ReactDOM.render(<Card />, document.getElementById("root"));
+        ReactDOM.render(<Cards />, document.getElementById("root"));
     </script>
 </body>
 
