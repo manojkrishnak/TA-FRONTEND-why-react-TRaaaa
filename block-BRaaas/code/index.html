@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function handleAlert(){
+            alert("Hello React Evenbt")
+        }
+
+        function handleAlert1(name){
+            alert("Hello "+ name)
+        }
+
+        function Button1(){
+            return(
+                <button onClick={handleAlert} className="bt1">Button 1</button>
+            )
+        }
+
+        function Button(props){
+            return(
+                <button onClick={() => handleAlert1(props.name)} className="bt1">{props.name}</button>
+            )
+        }
+
+        function Button3(props){
+            return(
+                <button onClick={() => handleAlert1(props.name)} className="bt1">{props.name}</button>
+            )
+        }
+
+        let fruits = [
+  { id: 'apple', value: '🍎 apple' },
+  { id: 'orange', value: '🍊 orange' },
+  { id: 'grape', value: '🍇 grape' },
+  { id: 'pear', value: '🍐 pear' },
+];
+function FruitsBtn(){
+    return (fruits.map((fruit, i) => <Button3 key={i} name={fruit.value}/>))
+}
+
+        function App(){
+            return (
+                <>
+                <Button1 />
+                <FruitsBtn />
+                <Button name="Arya"/>
+                <Button name="John"/>
+                <Button name="Bran" />
+                </>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById("root"))
+    </script>
+</body>
+</html>
