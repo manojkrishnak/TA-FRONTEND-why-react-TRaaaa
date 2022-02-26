@@ -35,7 +35,7 @@
   onClickHandler={() => alert("You Clicked Me!")}
 />
 
-```
+`````
 
 ### Demo
 
