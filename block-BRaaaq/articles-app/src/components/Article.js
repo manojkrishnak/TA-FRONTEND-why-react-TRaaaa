@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 function Article(props) {
             return (
                 <>
@@ -10,4 +11,9 @@ function Article(props) {
             )
         }
 
+Article.propTypes = {
+    title: PropTypes.string,
+    author: PropTypes.string,
+    description: PropTypes.number
+}
 export default Article;
