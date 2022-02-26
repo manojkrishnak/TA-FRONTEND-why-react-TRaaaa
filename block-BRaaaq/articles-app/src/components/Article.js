@@ -14,6 +14,6 @@ function Article(props) {
 Article.propTypes = {
     title: PropTypes.string,
     author: PropTypes.string,
-    description: PropTypes.number
+    description: PropTypes.string
 }
 export default Article;
